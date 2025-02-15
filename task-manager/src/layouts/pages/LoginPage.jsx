@@ -6,26 +6,25 @@ const { Title } = Typography;
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
-  const [formError, setFormError] = useState(""); // Para manejar el error global del formulario
+  const [formError, setFormError] = useState(""); 
   const navigate = useNavigate();
 
   const onFinish = (values) => {
     setLoading(true);
-    setFormError(""); // Limpiar el error al intentar iniciar sesión
+    setFormError(""); 
 
     setTimeout(() => {
-      // Verificar las credenciales: nombre de usuario y contraseña
+
       if (values.username === "admin" && values.password === "123456") {
         message.success("Inicio de sesión exitoso");
         navigate("/dashboard");
       } else {
-        setFormError("Credenciales incorrectas"); // Establecer el error si las credenciales son incorrectas
+        setFormError("Credenciales incorrectas");
       }
       setLoading(false);
     }, 1000);
   };
 
-  // Asegurarse de que el body y html no tengan márgenes o paddings
   useEffect(() => {
     document.body.style.margin = "0";
     document.documentElement.style.height = "100%";
@@ -82,11 +81,11 @@ const LoginPage = () => {
 
 const styles = {
   container: {
-    height: "100vh", // Asegurarse que el contenedor ocupe toda la altura de la ventana
+    height: "100vh", 
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "linear-gradient(135deg, #667eea, #764ba2)", // Fondo de gradiente
+    background: "linear-gradient(135deg, #667eea, #764ba2)", 
   },
   card: {
     width: 380,

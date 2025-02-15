@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import { Link } from "react-router-dom";
-import { DashboardOutlined, UserOutlined, SettingOutlined } from '@ant-design/icons'; // Importamos los iconos específicos
+import { DashboardOutlined, UserOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Sider, Content } = Layout;
 
